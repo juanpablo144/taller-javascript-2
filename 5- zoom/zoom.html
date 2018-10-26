@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #contain{
+            width: 98%;
+            height: 50px;
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="content">
+    <h1>Ampliar imagen</h1>
+    <div id="contain"> 
+        <img id="img" src="pantera.jpg" alt="panter" width="500">
+        <br/>
+        <button onclick="zoom()">Zoom</button>
+    </div> 
+    <script> 
+        var imagen = document.getElementById("img");
+        function zoom(){
+            var widhtImg = imagen.width;
+            var heightImg = imagen.height;
+            if(widhtImg == 500){
+                imagen.width = 800;
+            }else{
+                imagen.width = 500;
+            }
+            // opacidad inicial
+            var opacity = 0.01;  
+            // funcion en un intervalo de tiempo de 2 segundos
+            // o hasta que la opacidad sea 1 o mas
+            var timer = setInterval(function () {
+                if (opacity >= 1){
+                    clearInterval(timer);
+                }
+                imagen.style.opacity = opacity;
+                opacity += opacity * 0.1;
+            }, 20);
+        }
+    </script> 
+</body>
+</html>

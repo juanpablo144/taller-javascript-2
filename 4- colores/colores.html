@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4</title>
+    <style>
+        body{
+            height: 100%;
+        }
+        h1{
+            text-align: center;
+        }
+        #contain{
+            width: 98%;
+            height: 50px;
+            margin: 10px;
+            border: 2px solid black;
+            background-color: white;
+            text-align: center;
+        }
+        div{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .black{
+            background-color: black;
+        }
+        .black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body id="content">
+    <h1>Cambia de color el fondo</h1>
+    <div id="contain"> 
+        <div class="red" onmouseover="red()"></div>
+        <div class="green" onmouseover="green()"></div>
+        <div class="yellow" onmouseover="yellow()"></div>
+        <div class="blue" onmouseover="blue()"></div>
+        <div class="black" onmouseover="black()"></div>
+    </div> 
+    <script> 
+        var fondo = document.getElementById("content");
+        fondo.setAttribute("class", "white");
+        function red(){
+            fondo.setAttribute("class", "red");
+        }
+        function green(){
+            fondo.setAttribute("class", "green");
+        }
+        function yellow(){
+            fondo.setAttribute("class", "yellow");
+        }
+        function blue(){
+            fondo.setAttribute("class", "blue");
+        }
+        function black(){
+            fondo.setAttribute("class", "black");
+        }
+    </script> 
+</body>
+</html>
